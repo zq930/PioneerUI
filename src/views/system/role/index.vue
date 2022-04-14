@@ -457,14 +457,14 @@ function handleUpdate(row) {
 /** 根据角色ID查询菜单树结构 */
 function getRoleMenuTreeSelect(roleId) {
   return roleMenuTreeSelect(roleId).then(response => {
-    menuOptions.value = response.menus;
+    menuOptions.value = response.menuList;
     return response;
   });
 }
 /** 根据角色ID查询部门树结构 */
 function getRoleDeptTreeSelect(roleId) {
   return roleDeptTreeSelect(roleId).then(response => {
-    deptOptions.value = response.depts;
+    deptOptions.value = response.deptList;
     return response;
   });
 }
