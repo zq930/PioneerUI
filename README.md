@@ -5,10 +5,10 @@
 https://nodejs.org/en/download/
 
 # 安装依赖
-npm install
+npm install --global yarn
 
 # 启动服务
-npm run dev
+yarn dev
 ```
 
 浏览器访问 http://localhost:80
@@ -17,10 +17,10 @@ npm run dev
 
 ```bash
 # 构建测试环境
-npm run build:stage
+yarn build:stage
 
 # 构建生产环境
-npm run build:prod
+yarn build:prod
 ```
 
 ## 内置功能
