@@ -36,7 +36,7 @@
             >新增</el-button>
          </el-col>
          <el-col :span="1.5">
-            <el-button 
+            <el-button
                type="info"
                plain
                icon="Sort"
@@ -103,7 +103,7 @@
             <el-row>
                <el-col :span="24">
                   <el-form-item label="上级菜单">
-                     <tree-select
+                     <TreeSelect
                         v-model:value="form.parentId"
                         :options="menuOptions"
                         :objMap="{ value: 'menuId', label: 'menuName', children: 'children' }"
@@ -332,7 +332,7 @@ function getList() {
   });
 }
 /** 查询菜单下拉树结构 */
-async function getTreeselect() {
+async function getTreeSelect() {
   menuOptions.value = [];
   await listMenu().then(response => {
     const menu = { menuId: 0, menuName: "主类目", children: [] };
@@ -388,7 +388,7 @@ function resetQuery() {
 /** 新增按钮操作 */
 async function handleAdd(row) {
   reset();
-  await getTreeselect();
+  await getTreeSelect();
   if (row != null && row.menuId) {
     form.value.parentId = row.menuId;
   } else {
@@ -408,7 +408,7 @@ function toggleExpandAll() {
 /** 修改按钮操作 */
 async function handleUpdate(row) {
   reset();
-  await getTreeselect();
+  await getTreeSelect();
   getMenu(row.menuId).then(response => {
     form.value = response.data;
     open.value = true;

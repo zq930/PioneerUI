@@ -68,7 +68,7 @@
               <el-icon><question-filled /></el-icon>
             </el-tooltip>
           </template>
-          <tree-select
+          <TreeSelect
             v-model:value="info.parentMenuId"
             :options="menuOptions"
             :objMap="{ value: 'menuId', label: 'menuName', children: 'children' }"
@@ -267,7 +267,7 @@ function setSubTableColumns(value) {
   }
 }
 /** 查询菜单下拉树结构 */
-function getMenuTreeselect() {
+function getMenuTreeSelect() {
   listMenu().then(response => {
     menuOptions.value = proxy.handleTree(response.data, "menuId");
   });
@@ -277,5 +277,5 @@ watch(() => props.info.subTableName, val => {
   setSubTableColumns(val);
 });
 
-getMenuTreeselect();
+getMenuTreeSelect();
 </script>

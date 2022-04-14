@@ -207,7 +207,7 @@
                </el-col>
                <el-col :span="12">
                   <el-form-item label="归属部门" prop="deptId">
-                     <tree-select
+                     <TreeSelect
                         v-model:value="form.deptId"
                         :options="deptOptions"
                         placeholder="请选择归属部门"
@@ -410,7 +410,7 @@ const data = reactive({
     nickName: [{ required: true, message: "用户昵称不能为空", trigger: "blur" }],
     password: [{ required: true, message: "用户密码不能为空", trigger: "blur" }, { min: 5, max: 20, message: "用户密码长度必须介于 5 和 20 之间", trigger: "blur" }],
     email: [{ type: "email", message: "请输入正确的邮箱地址", trigger: ["blur", "change"] }],
-    phoneNumber: [{ pattern: /^1[3|4|5|6|7|8|9][0-9]\d{8}$/, message: "请输入正确的手机号码", trigger: "blur" }]
+    phoneNumber: [{ pattern: /^1[3-9][0-9]\d{8}$/, message: "请输入正确的手机号码", trigger: "blur" }]
   }
 });
 
@@ -426,7 +426,7 @@ watch(deptName, val => {
   proxy.$refs["deptTreeRef"].filter(val);
 });
 /** 查询部门下拉树结构 */
-function getTreeselect() {
+function getTreeSelect() {
   treeSelect().then(response => {
     deptOptions.value = response.data;
   });
@@ -628,6 +628,6 @@ function submitForm() {
   });
 };
 
-getTreeselect();
+getTreeSelect();
 getList();
 </script>

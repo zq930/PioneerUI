@@ -97,7 +97,7 @@
             <el-row>
                <el-col :span="24" v-if="form.parentId !== 0">
                   <el-form-item label="上级部门" prop="parentId">
-                     <tree-select
+                     <TreeSelect
                         v-model:value="form.parentId"
                         :options="deptOptions"
                         :objMap="{ value: 'deptId', label: 'deptName', children: 'children' }"
