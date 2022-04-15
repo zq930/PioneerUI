@@ -4,8 +4,11 @@
 # 安装node.js
 https://nodejs.org/en/download/
 
-# 安装依赖
+# 安装yarn
 npm install --global yarn
+
+# 安装依赖
+yarn --registry=https://registry.npmmirror.com
 
 # 启动服务
 yarn dev

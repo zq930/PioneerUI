@@ -129,6 +129,7 @@ export default {
                 text: '科技拓荒\t创新先行',
                 fontSize: 120,
                 fontWeight: 'bold',
+                fontFamily: '华文楷体',
                 lineDash: [0, 200],
                 lineDashOffset: 0,
                 fill: 'transparent',
