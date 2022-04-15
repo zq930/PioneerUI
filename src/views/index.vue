@@ -61,7 +61,7 @@ export default {
                   {
                     percent: 1,
                     style: {
-                      fill: 'black'
+                      fill: '#409EFF'
                     }
                   }
                 ]
@@ -109,7 +109,7 @@ export default {
                   {
                     percent: 1,
                     style: {
-                      fill: 'black'
+                      fill: '#409EFF'
                     }
                   }
                 ]
