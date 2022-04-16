@@ -70,7 +70,7 @@
     </el-form>
     <!--  底部  -->
     <div class="el-register-footer">
-      <span>Copyright © 2015-2022 jxthz.net All Rights Reserved.</span>
+      <span>Copyright 2015-2022 jxthz.net All Rights Reserved</span>
     </div>
   </div>
 </template>
